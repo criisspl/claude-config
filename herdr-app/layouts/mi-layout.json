@@ -1,0 +1,336 @@
+{
+  "id": "root",
+  "cloned_from": {
+    "name": "main",
+    "version": "0.1.16"
+  },
+  "type": "row",
+  "children": [
+    {
+      "id": "sidebar",
+      "type": "column",
+      "children": [
+        {
+          "id": "brand",
+          "type": "block",
+          "content": {
+            "mod": "workspace-chrome"
+          },
+          "size": {
+            "px": 46
+          },
+          "window_drag": true
+        },
+        {
+          "id": "sidebar-lists",
+          "type": "column",
+          "children": [
+            {
+              "id": "pendientes",
+              "type": "block",
+              "content": {
+                "mod": "mi-pendientes",
+                "props": {
+                  "compact": true
+                }
+              },
+              "size": {
+                "px": 26
+              },
+              "min": 26
+            },
+            {
+              "id": "spaces",
+              "type": "block",
+              "content": {
+                "mod": "mi-spaces"
+              },
+              "size": {
+                "px": 200
+              },
+              "min": 90
+            },
+            {
+              "id": "avisos",
+              "type": "block",
+              "content": {
+                "mod": "mis-avisos"
+              },
+              "size": {
+                "px": 0
+              }
+            },
+            {
+              "id": "panel-resumen",
+              "type": "block",
+              "size": {
+                "weight": 1
+              },
+              "content": {
+                "mod": "mi-panel-resumen"
+              }
+            }
+          ]
+        },
+        {
+          "id": "sidebar-footer",
+          "type": "block",
+          "content": {
+            "mod": "workspace-chrome",
+            "props": {
+              "footer": true
+            }
+          },
+          "size": {
+            "px": 69
+          }
+        }
+      ],
+      "size": {
+        "px": 268
+      },
+      "min": 44,
+      "max": 480,
+      "background": "chrome",
+      "resizable": false
+    },
+    {
+      "id": "work",
+      "type": "column",
+      "children": [
+        {
+          "id": "franja",
+          "type": "block",
+          "content": {
+            "mod": "mi-cuenta",
+            "props": {
+              "franja": true
+            }
+          },
+          "size": {
+            "px": 3
+          }
+        },
+        {
+          "id": "tabs",
+          "type": "block",
+          "content": {
+            "mod": "mi-tabs"
+          },
+          "size": {
+            "px": 42
+          },
+          "window_drag": true
+        },
+        {
+          "id": "work-body",
+          "type": "row",
+          "children": [
+            {
+              "id": "centro",
+              "type": "column",
+              "children": [
+                {
+                  "id": "main",
+                  "type": "block",
+                  "content": {
+                    "tab": "active",
+                    "pane": {
+                      "header": {
+                        "content": {
+                          "mod": "pane"
+                        },
+                        "reveal": "always",
+                        "height": 30,
+                        "position": "top"
+                      },
+                      "background": "background",
+                      "border": {
+                        "width": 1,
+                        "color": "border"
+                      },
+                      "focus": {
+                        "width": 1,
+                        "color": "accent"
+                      },
+                      "radius": 10,
+                      "gap": 8,
+                      "lone": true
+                    }
+                  }
+                },
+                {
+                  "id": "db-panel",
+                  "type": "block",
+                  "content": {
+                    "mod": "mi-db"
+                  },
+                  "size": {
+                    "px": 0
+                  }
+                }
+              ],
+              "gap": 8
+            },
+            {
+              "id": "panel",
+              "type": "column",
+              "children": [
+                {
+                  "id": "panel-body",
+                  "type": "stack",
+                  "children": [
+                    {
+                      "id": "files",
+                      "type": "block",
+                      "content": {
+                        "mod": "files"
+                      }
+                    },
+                    {
+                      "id": "changes",
+                      "type": "block",
+                      "content": {
+                        "mod": "changes"
+                      }
+                    },
+                    {
+                      "id": "pull-requests",
+                      "type": "block",
+                      "content": {
+                        "mod": "branch-pr"
+                      }
+                    },
+                    {
+                      "id": "p-avisos",
+                      "type": "block",
+                      "content": {
+                        "mod": "mis-avisos",
+                        "props": {
+                          "panel": true
+                        }
+                      }
+                    },
+                    {
+                      "id": "p-issues",
+                      "type": "block",
+                      "content": {
+                        "mod": "mi-issues",
+                        "props": {
+                          "panel": true
+                        }
+                      }
+                    },
+                    {
+                      "id": "p-db",
+                      "type": "block",
+                      "content": {
+                        "mod": "mi-db-explorer",
+                        "props": {
+                          "panel": true
+                        }
+                      }
+                    }
+                  ],
+                  "active": "files"
+                }
+              ],
+              "size": {
+                "px": 368
+              },
+              "min": 280,
+              "max": 900,
+              "hidden": true
+            }
+          ],
+          "padding": 8,
+          "gap": 8
+        },
+        {
+          "id": "status",
+          "type": "row",
+          "size": {
+            "px": 28
+          },
+          "children": [
+            {
+              "id": "status-info",
+              "type": "block",
+              "content": {
+                "mod": "workspace-status"
+              },
+              "size": {
+                "weight": 1
+              }
+            },
+            {
+              "id": "cuenta",
+              "type": "block",
+              "content": {
+                "mod": "mi-cuenta"
+              },
+              "size": {
+                "px": 96
+              }
+            },
+            {
+              "id": "usage",
+              "type": "block",
+              "content": {
+                "mod": "mi-uso-barra"
+              },
+              "size": {
+                "px": 260
+              }
+            },
+            {
+              "id": "issues",
+              "type": "block",
+              "content": {
+                "mod": "mi-issues",
+                "props": {
+                  "barra": true
+                }
+              },
+              "size": {
+                "px": 0
+              }
+            },
+            {
+              "id": "live-ports",
+              "type": "block",
+              "content": {
+                "mod": "live-ports"
+              },
+              "size": {
+                "px": 64
+              }
+            }
+          ]
+        }
+      ],
+      "resizable": false
+    }
+  ],
+  "background": "canvas",
+  "terminal_padding": [
+    14,
+    12
+  ],
+  "divider": {
+    "width": 1,
+    "color": "border"
+  },
+  "titlebar": "none",
+  "traffic_lights": [
+    12,
+    16
+  ],
+  "toast": "mi-toast",
+  "window_blur": true,
+  "colors": {
+    "canvas": "#1b1d2bb8",
+    "chrome": "#1b1d2bd0"
+  },
+  "terminal_opacity": 0.88
+}

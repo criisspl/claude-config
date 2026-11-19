@@ -1,0 +1,21 @@
+name: Comprobaciones
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  comprobaciones:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - run: shellcheck -S warning hooks/*.sh herdr-app/cw install.sh tests/check.sh
+      - run: bash tests/check.sh
+      - run: npx -y agnix@0.59.0 . --target claude-code
